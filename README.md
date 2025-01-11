@@ -8,7 +8,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 
 ##### Seção 1: Unix, Shell & Git
 
-- [ ] 1-1: _Unix & Shell_
+- [x] 1-1: _Unix & Shell_
 - [ ] 1-2: _Git o que é e para que serve_
 - [ ] 1-3: _Git & GiHub entendendo conceitos_ 
 
