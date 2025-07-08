@@ -1,0 +1,44 @@
+1. Mostre todo o conteudo do arquivo countries.txt na tela
+cat countries.txt
+
+2. Mostre o conteudo de countries.txt, pagina por pagina, até encontrar Zambia
+less countris.txt (barra de espaço para paginação; tecla "Q" para sair)
+
+3. Mostre novamente o conteúdo de countries.txt página por página, mas agora utilize um comando para buscar por Zambia.
+less countries.txt (usar a tecla "/" para habilitar a buscar)
+
+4. Busque por Brazil no countries.txt
+grep Brazil countries.txt
+
+5. Busque novamente por brazil, mas agora utilize o lower case e não considere letras maiúsculas ou minúsculas.
+grep -i brazil countries.txt
+
+========
+
+
+6. Busque pelas frases que não contenham a palavra fox
+grep -iv fox frases.txt
+
+7. Conte o numero de palavras do arquivo frases.txt
+wc -w frases.txt
+
+8. Conte o numero de linhas do arquivo frases.txt
+wc -l frases.txt
+
+========
+
+
+9. Crie os arquivos empty.tbt e empty.pdf
+touch empty.tbt empty.pdf
+
+10. Liste todos os arquivos do diretorio unix_tests_search
+ls
+
+11 Liste todos os arquivos que terminem com txt
+ls *txt
+
+12. Liste todos os arquivos que terminem com tbt ou txt
+ls t?t
+
+13. Acesse o manual do comando ls
+man ls

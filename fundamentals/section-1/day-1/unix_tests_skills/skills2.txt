@@ -1,0 +1,5 @@
+Terminal
+Linux
+JavaScript
+Html
+CSS
