@@ -1,7 +1,8 @@
-// 🚀 Manipulação de objetos: Parte 2
-// Imagine que você seja responsável por cuidar do sistema de entrega de um restaurante e que precise enviar mensagens com as informações da compra. Para isso, use o seguinte código:
+/*
+🚀 Manipulação de objetos: Parte 2
+Imagine que você seja responsável por cuidar do sistema de entrega de um restaurante e que precise enviar mensagens com as informações da compra. Para isso, use o seguinte código:
+*/
 
-Copiar
 const order = {
   name: 'Rafael Andrade',
   phoneNumber: '11-98763-1416',
@@ -38,9 +39,10 @@ const order = {
   },
 };
 
-/* EXERCICIO 01 */
-// Complete a função customerInfo() para que seu retorno seja: 'Olá, Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, Rua das Flores, Número: 389, AP: 701.'.
-// De olho na dica 👀: Note que o parâmetro da função já está sendo passado na chamada da função.
+/* EXERCICIO 01 
+Complete a função customerInfo() para que seu retorno seja: 'Olá, Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, Rua das Flores, Número: 389, AP: 701.'.
+De olho na dica 👀: Note que o parâmetro da função já está sendo passado na chamada da função.
+*/
 
 const customerInfo = (fullOrder) => {
   // Adicione abaixo as informações necessárias.
@@ -54,17 +56,25 @@ const customerInfo = (fullOrder) => {
   return message;
 }
 
-console.log(customerInfo(order));
+// console.log(customerInfo(order));
 
+/* EXERCICIO 02
+Complete a função orderModifier() para que seu retorno seja: 'Olá, Luiz Silva, o valor total de seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00.'.
+Modifique o nome da pessoa compradora para Luiz Silva;
+Modifique o valor total da compra para R$ 50,00.
+*/
 const orderModifier = (fullOrder) => {
   // Adicione abaixo as informações necessárias.
+  fullOrder["name"] = "Luiz Silva";
+  fullOrder["payment"]["total"] = 50.00;
+
+  const customerName = fullOrder.name;
+  const pizza = fullOrder.order.pizza;
+  const customerAddress = fullOrder.address;
+
+  const message = `Olá, ${customerName}, o valor total de seu pedido de ${pizza.marguerita}, ${pizza.pepperoni} e ${customerTel}, ${customerAddress.street}, ${customerAddress.number}, ${customerAddress.apartment}.`;
+
 }
+// console.log(orderModifier(order));
 
-console.log(orderModifier(order));
-
-// Complete a função customerInfo() para que seu retorno seja: 'Olá, Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, Rua das Flores, Número: 389, AP: 701.'.
-// De olho na dica 👀: Note que o parâmetro da função já está sendo passado na chamada da função.
-
-// Complete a função orderModifier() para que seu retorno seja: 'Olá, Luiz Silva, o valor total de seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00.'.
-// Modifique o nome da pessoa compradora para Luiz Silva;
-// Modifique o valor total da compra para R$ 50,00.
+console.log(order.order.pizza.marguerita);
