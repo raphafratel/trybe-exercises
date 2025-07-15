@@ -65,16 +65,18 @@ Modifique o valor total da compra para R$ 50,00.
 */
 const orderModifier = (fullOrder) => {
   // Adicione abaixo as informações necessárias.
+
   fullOrder["name"] = "Luiz Silva";
   fullOrder["payment"]["total"] = 50.00;
 
   const customerName = fullOrder.name;
-  const pizza = fullOrder.order.pizza;
-  const customerAddress = fullOrder.address;
+  const pizzas = Object.keys(fullOrder.order.pizza);
+  const drink = fullOrder.order.drinks.coke.type;
+  const payment = fullOrder.payment.total;
 
-  const message = `Olá, ${customerName}, o valor total de seu pedido de ${pizza.marguerita}, ${pizza.pepperoni} e ${customerTel}, ${customerAddress.street}, ${customerAddress.number}, ${customerAddress.apartment}.`;
+  const message = `Olá, ${customerName}, o valor total de seu pedido de ${pizzas[0]}, ${pizzas[1]} e ${drink} é ${payment}.`;
+
+  return message;
 
 }
-// console.log(orderModifier(order));
-
-console.log(order.order.pizza.marguerita);
+console.log(orderModifier(order));
